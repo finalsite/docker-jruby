@@ -1,11 +1,13 @@
+# Update this to bump the java version
 FROM openjdk:13-jdk-alpine
 
 RUN apk add --no-cache \
       bash \
       libc6-compat
 
-ENV JRUBY_VERSION 9.2.11.1
-ENV JRUBY_SHA256 f10449c82567133908e5e1ac076438307a7f0916f617f40fa314b78873a195dc
+# Update these two values to bump the JRuby version, get values from https://repo1.maven.org/maven2/org/jruby/jruby-dist/
+ENV JRUBY_VERSION 9.2.15.0
+ENV JRUBY_SHA256 9e8e5d73c42d1dad8a795a6dc39bd87e88fc8863f76e065e4099c32d085205b0
 
 RUN apk add --no-cache --virtual .build-deps \
       curl \
