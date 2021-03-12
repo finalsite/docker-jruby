@@ -1,7 +1,6 @@
-JRuby Docker Image
+Finalsite JRuby Docker Image
 ===================
 
-Builds jruby docker images.
-
-To update the images, specify the version in `<major>/VERSION`. This should be
-the full version.
+1. Update 9000/alpine-jdk/Dockerfile to the desired java/jruby versions
+2. Build and tag the container with {dev repo path}/builds/jruby:{jrubyversion}-jdk-alpine
+3. Push the new image
